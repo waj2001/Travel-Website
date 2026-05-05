@@ -1,0 +1,31 @@
+{% extends 'inherit.html '%}
+{% block contant %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculation page</title>
+</head>
+<body>
+    <form action="add" method="post">
+        {% csrf_token %}
+        <hr>
+
+        <h1>Airthmetic Operation</h1>
+        <hr>
+        first_number :- <input type="number" placeholder="Enter first number" name="num1"><br><br>
+        second_number :- <input type="number" placeholder="Enter second number" name="num2"><br><br>    
+        <button formaction="add">addition</button>
+        <button formaction="sub">substraction</button>
+        <button formaction="mult">multiplication</button>
+        <button formaction="div">division</button>
+
+    </form>
+    
+</body>
+</html>
+
+{% endblock %}
